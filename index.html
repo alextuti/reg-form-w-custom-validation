@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/main.css">
+  <title>Registration</title>
+</head>
+<body>
+  <header>Registration</header>
+  <form id="registration-form">
+
+    <label for="first-name">First Name</label>
+    <input 
+      type="text" 
+      id="first-name" 
+      required
+      pattern="[a-zA-Z]{2,}"
+      maxlength="30"
+      class="input-text required">
+    <div class="validation-messages">
+      <span data-rule="valueMissing" class="hide">The first name is required.</span>
+      <span data-rule="patternMismatch" class="hide">It should contain only alpha characters (a-z, A-Z)
+      and have a length between 2 and 30 characters.</span>
+    </div>
+
+    <label for="last-name">Last Name</label>
+    <input 
+      type="text" 
+      id="last-name" 
+      required
+      pattern="[a-zA-Z]{2,}"
+      maxlength="30"
+      class="input-text required">
+    <div class="validation-messages">
+      <span data-rule="valueMissing" class="hide">The last name is required.</span>
+      <span data-rule="patternMismatch" class="hide">It should contain only alpha characters (a-z, A-Z)
+      and have a length between 2 and 30 characters.</span>
+    </div>
+
+    <label for="email">E-mail address</label>
+    <input 
+      type="email" 
+      id="email" 
+      required 
+      class="input-text">
+    <div class="validation-messages">
+      <span data-rule="valueMissing" class="hide">The email address is required.</span>
+      <span data-rule="typeMismatch" class="hide">It should have the structure of
+      something@example.random</span>
+    </div>
+
+    <label for="password">Password</label>
+    <input 
+      type="password" 
+      id="password" 
+      required 
+      pattern="^(?=^.{8,35}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+      class="input-text">
+    <div class="validation-messages">
+      <span data-rule="valueMissing" class="hide">The password is required.</span>
+      <span data-rule="patternMismatch" class="hide">It should have at least 8 characters and contain
+      minimum 1 uppercase letter, 1 lowercase letter and 1 number</span>
+    </div>
+
+    <label for="birthday">Birthday</label>
+    <input 
+      type="date" 
+      id="birthday"
+      max="2000-01-01"
+      min="1880-01-01" 
+      class="birthday">
+
+    <label for="nationality">Nationality</label>
+    <input
+      type="text"
+      list="nationality-data"
+      id="nationality"
+      class="nationality">
+    <datalist id="nationality-data">
+      <option value="Afghanistan">
+      <option value="Åland Islands">
+      <option value="Albania">
+      <option value="Algeria">
+      <option value="Zambia">
+      <option value="Zimbabwe">
+    </datalist>
+
+    <label for="work-experience">Work experience</label>
+    <input
+      type="range"
+      id="work-experience"
+      min="0"
+      max="10"
+      step="1"
+      class="work-experience"
+      value="5">
+    <output id="work-experience-output"></output> <span id="work-experience-output-text">years</span>
+    
+    <div class="terms">
+    <input
+      type="checkbox"
+      id="terms">
+    <label for="terms">I accept the <a href="index.html">Terms and conditions</a> of this website.</label>
+    </div>
+    <input
+      type="submit"
+      id="register-button"
+      value="Register">
+
+  </form>
+
+  <script rel="text/javascript" src="/main.js"></script>
+</body>
+</html>

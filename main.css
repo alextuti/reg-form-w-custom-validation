@@ -1,0 +1,88 @@
+body{
+    font-family: Helvetica;
+}
+header{
+    width: 370px;
+    color: royalblue;
+    font-size: 28px;
+    padding: 20px 0px 15px 15px;
+    border-bottom-color: royalblue;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+form{
+    padding: 20px 0px 15px 15px;
+}
+label{
+    display: block;
+    font-size: 18px;
+    padding: 5px 0px 2.5px 0px;
+}
+input{
+    height: 17.5px;
+    width: 350px;
+    border-radius: 3px;
+}
+input.birthday{
+    width: auto;
+}
+.validation-messages{
+    display: inline-block;
+    font-size: 12px;
+}
+.hide{
+    display: none;
+}
+
+input{
+    border-top-color: black;
+    border-left-color: black;
+    border-right-color: black;
+    box-shadow:none;
+}
+
+input:required:invalid:focus{
+    border-bottom-color: red;
+    border-bottom-width: 3.5px;
+    box-shadow: none;
+}
+input:required:not(:focus){
+    border-bottom-color: black;
+    border-bottom-width: 2px;
+}
+input:required:valid{
+    border-bottom-color: green;
+    border-bottom-width: 3.5px;
+}
+#work-experience-output-text{
+    padding-left: 5px;
+}
+#work-experience-output-text, #work-experience-output{
+    margin-bottom: 5px;
+}
+.terms{
+    display: grid;
+    grid-template: 100% /28px 400px;
+    padding-top: 10px;
+}
+input#terms{
+    height: 16px;
+    grid-area: 1/1/2/2;
+    width: 22px;
+    border-radius: 0px;
+    margin: 0px;
+}
+.terms label{
+    grid-area: 1/2/2/3;
+    padding: 0;
+    font-size: 16px;
+}
+input#register-button{
+    margin-top: 15px;
+    margin-left: 135px;
+    width: 80px;
+    height: 30px;
+    background-color: royalblue;
+    color: white;
+    border: 0;
+}
