@@ -68,4 +68,6 @@ rangeWorkExperience.addEventListener('input', function(){
 
 // Register button validation
 
-document.getElementById("register-button").addEventListener('click', validate, false);
+document.getElementById("register-button").addEventListener('click', () =>{
+    console.log(document.getElementById('registration-form').elements[0].value);
+});
