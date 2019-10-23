@@ -1,1 +1,1 @@
-** OPEN IT WITH WEBPACK STARTER TO SEE THE FEATURES **
+A registration form that has custom validation for different input types.
